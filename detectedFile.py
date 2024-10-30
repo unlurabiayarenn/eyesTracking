@@ -62,8 +62,8 @@ with map_face_mesh.FaceMesh(min_detection_confidence=0.5, min_tracking_confidenc
             right_eye_ratio, right_eye_horizontal, right_eye_vertical = eyeStatus(mesh_coords, RIGHT_EYE)
 
             # Oranların eşik değerlerini kontrol et
-            left_eye_status = "Acik" if left_eye_ratio < 5.0 else "Kapali"  # Göz açıkken oran düşük
-            right_eye_status = "Acik" if right_eye_ratio < 5.0 else "Kapali"  # Göz açıkken oran düşük
+            left_eye_status = "Acik" if left_eye_ratio < 4.0 else "Kapali"  # Göz açıkken oran düşük
+            right_eye_status = "Acik" if right_eye_ratio < 4.0 else "Kapali"  # Göz açıkken oran düşük
 
             # Veriyi data listesine ekleyin
             data.append([left_eye_ratio, right_eye_ratio, left_eye_status, right_eye_status])
